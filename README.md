@@ -15,13 +15,13 @@ jQuery JavaScript initialize v2  module and plugin development
       currentIndex.prototype.init = function() {
 
         let ic  = this.currentIndex;
-        let ciD = ic.pID;
+        let ciD = ic.tID;
         currentIndex.prototype.layout(ciD);
 
       }
       currentIndex.prototype.layout = function( obj ) {
           console.log( visibilityBy );
-          console.log( obj );
+          console.log( obj.pID );
       }
 
       return new currentIndex( $obj ).init();
@@ -34,7 +34,7 @@ jQuery JavaScript initialize v2  module and plugin development
       findChild.prototype.init = function() {
 
         let ic  = this.currentIndex;
-        let ciD = ic.pID;
+        let ciD = ic.tID;
         currentIndex.prototype.layout(ciD);
 
       }
@@ -63,8 +63,8 @@ jQuery JavaScript initialize v2  module and plugin development
 
    if( typeof v2nielsOffice === 'object') {
     v2nielsOffice.init({
-      pID : '#parentContainer'
-
+      tID : { pID :'#parentContainer', tChild : '#targetE' },
+      uID : { yID :'#parentContainer', xChild : '#targetE' },
     });
    }
 
